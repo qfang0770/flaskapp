@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+  <h2>Predict Cancellations</h2>
+
+  <form method="POST" action="/">
+    Lead time:<br>
+    <input type="number" name="lead_time" value=20>
+    <br><br>
+    Average price per room:<br>
+    <input type="number" name="avg_price_per_room" value=100>
+    <br><br>
+    Number of special requests:<br>
+    <input type="number" name="no_of_special_requests" value=1>
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  {% if pred %}
+  <p>The cancellation probability is {{ pred }}</p>
+  {% endif %}
+
+  </body>
+</html>
